@@ -1,8 +1,6 @@
 #! /bin/bash
-
 # defaults
 REGISTRY="ghcr.io/deb4sh"
-
 # parse options
 while getopts :r: flag
 do
@@ -10,7 +8,6 @@ do
         r) REGISTRY=${OPTARG};;
     esac
 done
-
 # get current tag information
 IS_DEV_BUILD=$(git tag -l --contains HEAD)
 GIT_TAG=$(git describe --abbrev=0 --tags HEAD)
