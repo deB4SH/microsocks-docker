@@ -24,5 +24,5 @@ echo "Building image with tag $TAG"
 
 docker \
     build . \
-    -f src/docker/Dockerfile \
+    -f ../src/docker/Dockerfile \
     -t $(echo "$REGISTRY/microsocks-docker:$TAG")
